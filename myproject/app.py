@@ -18,9 +18,16 @@ def read_pdf(file):
         full_text += page.extract_text()
     return full_text
 
+def split_text(text, max_chunk_size):
+    words = text.split()
+    for i in range(0, len(words), max_chunk_size):
+        yield ' '.join(words[i:i + max_chunk_size])
+
 def summarize_text(text):
-    # Use the summarizer to summarize the text
-    return summarizer(text, max_length=150, min_length=40, do_sample=False)[0]['summary_text']
+    max_chunk_size = 512  # Setting chunk size to 512 tokens (adjust as needed)
+    chunks = list(split_text(text, max_chunk_size))
+    summaries = [summarizer(chunk, max_length=150, min_length=40, do_sample=False)[0]['summary_text'] for chunk in chunks]
+    return ' '.join(summaries)
 
 @app.route('/')
 def index():
