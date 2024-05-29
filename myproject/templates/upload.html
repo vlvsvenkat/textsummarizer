@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <style>
+        body {
+            background: url('https://essayclick.net/static/img/regular/summary1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+        }
+        form {
+            margin-top: 380px;
+            margin-left: 10px;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+        }
+        input[type="file"] {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

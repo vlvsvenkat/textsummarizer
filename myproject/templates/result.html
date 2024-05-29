@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summary</title>
+    <style>
+        body {
+            background: url('https://essayclick.net/static/img/regular/summary1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: auto;
+            text-align: center;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .summary {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Summary</h1>
+        <div class="summary">{{ summary }}</div>
+        <a href="/">Upload another file</a>
+    </div>
+</body>
+</html>
